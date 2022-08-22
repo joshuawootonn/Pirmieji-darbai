@@ -1,0 +1,11 @@
+.big-box {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    transition: width 2s;
+}
+
+.big-box:hover {
+    width: 600px;
+    background-color: brown;
+}
