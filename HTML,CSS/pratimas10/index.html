@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="register">Register to Fancy Form</h1>
+    </header>
+    <main class="register">
+        <div>
+            <p>All fields are
+                <span class="required">required</span> unless marked as "optional"
+            </p> <br>
+            <form method="POST">
+                <div>
+                    <label for="read-only">Your unique ID that you can't change</label>
+                    <input type="read-only" type="text" name="read-only" value="YBX0123" readonly> <br>
+
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" required> <br>
+
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" required> <br>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input id="age" type="age" name="age" min="18" max="50" required> <br>
+                </div>
+                <div>
+                    <label for="about">Tell us a little about yourself</label>
+                    <textarea name="about" id="about" cols="30" rows="10" required></textarea> <br>
+                </div>
+                <div>
+                    <input id="terms" type="checkbox" name="terms" value="1" required>
+                    <label for="terms">I agree with the Terms and Conditions</label> <br>
+                </div>
+                <button class="submit-buttom">Register</button>
+
+
+        </div>
+        </form>
+    </main>
+</body>
+
+</html>

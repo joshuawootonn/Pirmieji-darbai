@@ -1,0 +1,52 @@
+body {
+    background-color: darkslategrey;
+    color: white;
+
+}
+
+.register {
+    text-align: center;
+}
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input:read-only {
+    background-color: darkgrey;
+}
+
+input:valid,
+textarea:valid,
+input:in-range {
+    border: 2px solid green;
+}
+
+input:invalid,
+textarea:invalid,
+input:out-of-range {
+    border: 2px solid red;
+}
+
+input:required,
+textarea:required {
+    border-left: 2px solid violet;
+}
+
+.required {
+    background-color: violet;
+}
+
+.submit-buttom {
+    background-color: green;
+    color: white;
+}
+
+.submit-buttom:hover {
+    background-color: darkgreen;
+}
+
+input [type="checkbox"]:checked+label {
+    color: blue;
+}
