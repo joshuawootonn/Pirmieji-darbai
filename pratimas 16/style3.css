@@ -1,0 +1,25 @@
+.main-container {
+    border: 6pm dotted red;
+    width: 100px;
+    height: 100px;
+    transition: width 4s, background-color 1s ease-out 1s;
+    background-color: yellow;
+    animation-name: background-change;
+    animation-duration: 5s;
+
+}
+
+div.main-container:hover {
+    background-color: red;
+    width: 500px;
+}
+
+@keyframes background-change {
+    from {
+        background-color: blue;
+    }
+
+    to {
+        background-color: green;
+    }
+}
