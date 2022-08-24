@@ -5,7 +5,7 @@ body {
 }
 
 .title {
-    color: white;
+    color: rgb(80, 80, 136);
 }
 
 nav {
@@ -24,31 +24,39 @@ nav a:hover {
     color: rgb(39, 2, 73);
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
 .container1 {
     text-align: left;
     color: rgb(80, 80, 136);
 
 }
 
+.container2 {
+    color: rgb(80, 80, 136);
+}
+
 h2 {
     font-size: 20px;
 }
 
-.container1 {
-    display: grid;
-    grid-template-rows: auto auto auto;
 
+.flex-item img {
+    height: 100%;
+    width: 100%;
 }
 
-.grid-item {
+.flex-item {
     width: 350px;
     height: 460px;
-    padding: 10px 0;
-    border: 5px solid rgb(80, 80, 136);
+    border: 2px solid rgb(80, 80, 136);
     margin: 10px 0;
 }
 
-img {
-    height: 100%;
-    width: 100%;
+.footer {
+    color: rgb(80, 80, 136);
 }
