@@ -6,6 +6,8 @@ body {
 
 .title {
     color: rgb(80, 80, 136);
+    background-color: white;
+    box-shadow: 20px 10px 60px 5px inset;
 }
 
 nav {
