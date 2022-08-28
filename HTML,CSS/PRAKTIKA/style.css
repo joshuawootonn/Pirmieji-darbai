@@ -1,7 +1,10 @@
 body {
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: width 4s, background-color 1s ease-out;
     background-color: lightblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    animation-name: background-changes;
+    animation-duration: 5s;
 }
 
 .title {
@@ -59,7 +62,7 @@ h2 {
     margin: 10px 0;
 }
 
-.footer {
+.the-end {
     color: rgb(80, 80, 136);
 }
 
@@ -72,4 +75,14 @@ h2 {
 
 .backpack {
     text-align: right;
+}
+
+@keyframes background-changes {
+    from {
+        background-color: lightblue;
+    }
+
+    to {
+        background-color: grey;
+    }
 }
