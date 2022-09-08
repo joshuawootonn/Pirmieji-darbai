@@ -19,4 +19,4 @@ switch (rating) {
         break;
 }
 
-console.log(`Įvertinimas ${rating}`)
+console.log(`Įvertinimas ${rating}`) 
