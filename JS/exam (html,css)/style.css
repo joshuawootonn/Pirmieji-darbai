@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body {
+    font-family: 'muli', sans-serif;
+  }
+
+.left-set img {
+    margin: 10px 30px 10px 40px;
+    height: 350px;
+    width: 200px;
+}
+
+
+.single-item {
+    display: flex; 
+    text-align: left; 
+    justify-content: space-between;
+    height:400px;
+    width: 600px;
+    margin:200px 200px 200px 300px;
+    background-color: #f5f5f5;
+}
+
+.description p {
+    font-size: 0.9rem;
+    text-align: justify;
+    hyphens: auto;
+    padding-right: 15px;
+  }
+
+.right-set {
+    padding-top: 25px;
+  }
+
+.name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subname {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    padding-left: 0;
+}
+
+.black {
+    height: 20px;
+    width: 20px;
+    background-color: #222;
+    border-radius: 15%;
+    border:grey solid 2px;
+    margin-right: 11px;
+}
+
+.black:hover {
+    border: #222 solid 2px;
+    transition: all 0.4s ease;
+}
+
+.blue {
+    height: 20px;
+    width: 20px;
+    background-color: #07449f;
+    border-radius: 15%;
+    border:grey solid 2px;
+}
+
+.blue:hover {
+    border:#07449f solid 2px;
+    transition: all 0.4s ease;
+}
+
+button {
+    width: 315px;
+    height: 30px;
+    border: #222 solid 2px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:#222;
+    color: white;
+    transition: all 0.4s ease;
+}
