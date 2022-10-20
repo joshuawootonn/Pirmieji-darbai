@@ -20,7 +20,7 @@ const populateTable = async () => {
   const toDos = await getToDosList();
   const tableElement = document.querySelector("table#to-dos-list");
 
-  toDos.forEach((toDoItem) => addRow(toDoItem));
+  toDos.forEach((toDoItem) => addRow(toDoItem, tableElement));
 };
 
 export { populateTable };
