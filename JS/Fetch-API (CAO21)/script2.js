@@ -61,7 +61,7 @@ const createTable = () => {
   tableThead.append(tableTR);
 
   const table = document.createElement("table");
-  table.append(thead, document.createElement("div"));
+  table.append(tableThead, document.createElement("div"));
   document.body.append(table);
 };
 
@@ -107,7 +107,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
   const searchString = document.getElementById("search").value.toLowerCase();
-  renderTable(
+  populateTable(
     state.robots.filter((robot) =>
       robot.name.toLowerCase().includes(searchString)
     )
