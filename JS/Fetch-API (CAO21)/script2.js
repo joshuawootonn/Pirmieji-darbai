@@ -1,7 +1,7 @@
 const state = {};
 
 const createCheckbox = () => {
-  const checkbox = document.createElement("INPUT");
+  const checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
   checkbox.setAttribute("id", "isVipCheckbox");
   document.body.append(checkbox);
@@ -115,11 +115,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
 });
 
 document.getElementById("isVipCheckbox").addEventListener("change", (event) => {
-  populateTable(
-    event.target.checked
-      ? state.robots.filter((robot) => robot.vip)
-      : state.robots
-  );
+  const filteredRobots = event.target.checked
+    ? state.robots.filter((robot) => robot.vip)
+    : state.robots;
+  populateTable(filteredRobots);
 });
 
 const fetchData = async () => {
