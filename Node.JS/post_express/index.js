@@ -5,9 +5,10 @@ require("dotenv").config(); //config() paima is bibliotekos info, kuria ten turi
 const app = express();
 const PORT = +process.env.PORT || 5000;
 
-app.use(express.json());
+app.use(express.json()); // app yra express instancija
 
 app.post("/", (req, res) => {
+  //"/" - signalas i URL
   res.send({ message: "Sveiki atvykę į projektą" });
 });
 
