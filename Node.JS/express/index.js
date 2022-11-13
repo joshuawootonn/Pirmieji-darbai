@@ -10,27 +10,27 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (_, res) => {
-  res.send("Sveiki!");
+	res.send("Sveiki!");
 });
 
 app.post("/", (req, res) => {
-  const age = req.body?.age || 5;
-  // naudok req.body.age. jei neegzistuoja - naudok 5
+	const age = req.body?.age || 5;
+	// naudok req.body.age. jei neegzistuoja - naudok 5
 
-  // jei `age` yra truthy reiksme (ne 0, ne null, ne undefined, ne '', ...)
-  // const providedAge = age ? age : 0;
+	// jei `age` yra truthy reiksme (ne 0, ne null, ne undefined, ne '', ...)
+	// const providedAge = age ? age : 0;
 
-  res.send({ ageTimesTwo: age * 2 });
+	res.send({ ageTimesTwo: age * 2 });
 });
 
 // localhost:5000/jonas-152 grąžins { userId: 'jonas-152' }
 app.get("/:userId", (req, res) => {
-  const userId = +req.params?.userId;
+	const userId = +req.params?.userId;
 
-  if (userId <= users.length - 1 && userId >= 0) {
-    res.send(users[userId]);
-  }
-  res.send({ info: "User not found" });
+	if (userId <= users.length - 1 && userId >= 0) {
+		res.send(users[userId]);
+	}
+	res.send({ info: "User not found" });
 });
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
