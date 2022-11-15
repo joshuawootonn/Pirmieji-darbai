@@ -17,13 +17,13 @@ app.get("/", (_, res) => {
 });
 
 app.post("/", (req, res) => {
-  const { name, surname } = req.body.user;
-  name = users.find((name) => users.name === name);
-  surname = users.find((surname) => users.surname === surname);
+  const { name, surname } = req.body;
 
-  users.push(user);
-  res.send(users);
-  res.end();
+  // name = users.find((name) => users.name === name);
+  // surname = users.find((surname) => users.surname === surname);
+
+  users.push(name, surname);
+  res.send(users).end();
 });
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
