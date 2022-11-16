@@ -22,7 +22,7 @@ app.post("/", (req, res) => {
   // name = users.find((name) => users.name === name);
   // surname = users.find((surname) => users.surname === surname);
 
-  users.push(name, surname);
+  users.push({ name, surname });
   res.send(users).end();
 });
 

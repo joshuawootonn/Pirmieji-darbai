@@ -1,6 +1,6 @@
 const HOSTNAME = "http://localhost:5000";
 let users = [];
-const nameListAfterSubmit = document.querySelector("#submit-button");
+const nameListAfterSubmit = document.querySelector("#form-submit");
 
 nameListAfterSubmit.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -11,12 +11,12 @@ nameListAfterSubmit.addEventListener("submit", async (event) => {
   const userSurname = userSurnameInput.value.trim();
 
   try {
-    await fetch(HOSTNAME, {
+    const response = await fetch(HOSTNAME, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userName, userSurname }),
+      body: JSON.stringify({ name: userName, surname: userSurname }),
     });
     users = await response.json();
 
@@ -41,7 +41,7 @@ const renderNames = async (isInitialRender) => {
   users.forEach((user) => {
     const userListEl = document.createElement("li");
 
-    userListEl.innerText = `${user.name} ${user.surname}`;
+    userListEl.innerText = `${user?.name} ${user?.surname}`;
 
     userList.append(userListEl);
   });
