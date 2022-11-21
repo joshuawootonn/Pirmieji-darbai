@@ -12,6 +12,7 @@ const DB = process.env.DB;
 const dbConnection = process.env.dbConnection;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/users", async (_, res) => {
   const connection = await client.connect();
