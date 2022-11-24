@@ -16,11 +16,7 @@ app.use(cors());
 
 app.get("/users", async (_, res) => {
   const connection = await client.connect();
-  const data = await connection
-    .db(DB)
-    .collection(dbConnection)
-    .find()
-    .toArray();
+  const data = connection.db(DB).collection(dbConnection).find().toArray();
   await connection.close();
   return res.send(data);
 });
