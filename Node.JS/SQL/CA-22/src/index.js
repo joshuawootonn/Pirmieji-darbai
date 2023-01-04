@@ -2,12 +2,14 @@ import express from "express";
 import cors from "cors";
 import { PORT } from "./config.js";
 import auth from "../routes/auth.js";
+import content from "../routes/content.js";
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 app.use("/auth/", auth);
+app.use("/content/", content);
 
 app.get("/", (req, res) => {
   res.send({ msg: "Server is running" });
