@@ -2,3 +2,32 @@ a {
     text-decoration: none;
     color: black;
 }
+
+#registerForm, #loginForm {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#registerEmailInput, #registerPasswordInput, #loginEmailInput, #loginPasswordInput{
+    margin-bottom: 10px;
+    height: 25px;
+    width: 300px;
+}
+
+#button {
+    margin-bottom: 10px ;
+    height:25px;
+    width:150px;
+    background-color: rgb(206, 201, 201);
+    border: 0px;
+}
+
+#welcome {
+    margin-top: 200px;
+    margin-left: 350px;
+   
+}
+
