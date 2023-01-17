@@ -3,7 +3,7 @@ import { renderHome } from "./modules/renderHome.js";
 
 const app = express();
 
-const PORT = 5_000;
+const PORT = 5_002;
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
