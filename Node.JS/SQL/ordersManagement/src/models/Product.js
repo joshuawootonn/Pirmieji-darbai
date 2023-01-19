@@ -1,10 +1,11 @@
 import joi from "joi";
 
 const productSchema = joi.object({
-  name: joi.string(),
-  price: joi.number(),
-  isAvailable: joi.boolean(),
-  imageURL: joi.string(),
+  id: joi.number(),
+  name: joi.string().required(),
+  price: joi.number().required(),
+  isAvailable: joi.boolean().required(),
+  imageURL: joi.string().required(),
 });
 
 export class Product {
@@ -15,7 +16,7 @@ export class Product {
   imageURL;
 
   constructor(name, price, isAvailable, imageURL, id) {
-    const newProductData = { name, price, isAvailable, imageURL };
+    const newProductData = { id, name, price, isAvailable, imageURL };
 
     const productValidationResult = productSchema.validate(newProductData);
 
