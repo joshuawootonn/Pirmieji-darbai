@@ -21,7 +21,7 @@ export const createOrder = ({
     });
 
     if (order) {
-      orders.push(order);
+      orders.push(order); //insert into
       return order;
     }
   } catch (error) {
@@ -31,6 +31,6 @@ export const createOrder = ({
 };
 
 export const getOrders = () => {
-  return orders;
+  return orders; //select from
   //su get funkcijom visada return!
 };
