@@ -28,15 +28,6 @@
   color: #61dafb;
 }
 
-.importantValue {
-  color: red;
-}
-
-.boldValue{
-  font-weight: bold;
-  color: yellow;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

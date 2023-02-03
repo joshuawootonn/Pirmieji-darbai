@@ -1,30 +1,28 @@
-import { useState } from "react";
+import logo from "./logo.svg";
 import "./App.css";
+import { Form } from "./components/Form";
+import { NoteForm } from "./components/NoteForm";
+import { RandomNumberGenerator } from "./components/RandomNumber";
 
 function App() {
-  const [i, setI] = useState(0);
-  const [description, setDescription] = useState("");
-
-  console.log(i);
-
   return (
-    <div className="App">
-      <input
-        value={description}
-        onChange={(event) => setDescription(event.target.value)}
-      />
-      <button
-        onClick={
-          () => setI(i + 1) //naudoti tik pradiniams projektams
-        }
-      >
-        Submit
-      </button>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <p>Labas</p>
+    //     <p>Studentai</p>
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //   </header>
 
-      <p>i antruoju {i ** 2}</p>
+    <main>
+      <RandomNumberGenerator />
+      {/* <Form /> */}
 
-      <p>{description}</p>
-    </div>
+      {/* <NoteForm>
+          <h1>Notes App</h1>
+          <h2>Welcome</h2>
+        </NoteForm> */}
+    </main>
+    // </div>
   );
 }
 
