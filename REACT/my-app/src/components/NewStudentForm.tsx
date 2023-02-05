@@ -7,7 +7,7 @@ export const NewStudentForm = () => {
   const [age, setStudentAge] = useState<null | number>(null); //useState(0)
   const [newStudent, setNewStudent] = useState([]);
 
-  //pasiklaust
+  //tipas nurodomas. arba e:any
   const handleStudentSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
@@ -29,7 +29,7 @@ export const NewStudentForm = () => {
       <input
         type="number"
         //pasiklaust
-        value={age ?? ""}
+        value={age ?? ""} //0
         onChange={(e) => setStudentAge(+e.target.value)}
       />
       <button>ADD</button>

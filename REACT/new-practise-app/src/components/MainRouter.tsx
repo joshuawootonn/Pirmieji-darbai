@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router";
 import { BrowserRouter, Link, useLocation } from "react-router-dom";
 import { VisitCount } from "./VisitCount";
 
-//pasiklaust
 export const MainRouter = (props: any) => {
+  console.log(props);
   return (
     <BrowserRouter>
       <header className="App-header">
