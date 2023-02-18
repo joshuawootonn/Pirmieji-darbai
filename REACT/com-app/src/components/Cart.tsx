@@ -1,10 +1,25 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
-export const CartContext = React.createContext<Array<any>>([]);
+export type LineItem = {
+  quantity: number;
+  product: { name: string; price: number };
+};
+
+export const CartContext = React.createContext<{
+  lineItems: Array<LineItem>;
+  setLineItems: (product: LineItem[]) => void;
+}>({
+  lineItems: [],
+  setLineItems: () => {
+    console.log("Cart context was used outside of a provider");
+  },
+});
 
 export const Cart = () => {
   //   const [cart, setCart] = useState<Array<any>>([]);
   const cart = useContext(CartContext);
 
-  return <h1>Cart:{cart.length}</h1>;
+  console.log(cart.lineItems);
+
+  return <h1>Cart:{cart.lineItems.length}</h1>;
 };

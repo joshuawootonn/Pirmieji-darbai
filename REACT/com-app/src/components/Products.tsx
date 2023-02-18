@@ -9,14 +9,22 @@ const knownProducts = [
 ];
 
 export const Products = () => {
-  const [products, setProducts] = useState(knownProducts);
+  const [lineItems, setLineItems] = useState<
+    Array<{ quantity: number; product: { name: string; price: number } }>
+  >([]);
+  console.log(lineItems);
 
   //du mygtukai + ir - kiekvienam produktui, paspaudus + prideda viena produktu i krepseli, paspaudus - atima viena produktu is krepselio
   return (
     <>
-      <CartContext.Provider value={[]}>
+      <CartContext.Provider
+        value={{
+          lineItems,
+          setLineItems,
+        }}
+      >
         <div>
-          {products.map((product) => (
+          {knownProducts.map((product) => (
             <Product product={product} />
           ))}
         </div>
